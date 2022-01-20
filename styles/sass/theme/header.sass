@@ -1,0 +1,130 @@
+.headerDesktop
+    width: 100%
+    display: flex
+    justify-content: space-between
+    background-color: #fff
+
+    ul
+        display: flex
+        flex-wrap: nowrap
+        flex-direction: row
+        list-style: none
+        overflow: hidden
+        align-items: center
+        padding: 0
+
+    .part01Menu
+        padding-left: 50px
+        li
+            padding: 10px
+            
+            a
+                text-decoration: none
+                color: #333
+                letter-spacing: 2px
+                font-size: 1vw
+                padding: 0 0px 0 25px
+                position: relative
+
+            .lojaHeader
+                font-size: 25px
+                color: #e13d29
+                font-weight: bold
+            .kafnetHeader
+                font-size: 25px
+                margin-left: 40px
+                color: #545454
+                font-weight: bold
+    
+    .part02Menu
+        padding-right: 50px
+        li
+            padding: 0 35px !important
+            
+            a
+                text-decoration: none
+                color: #333
+                letter-spacing: 2px
+                font-size: 1vw
+                padding: 30px
+                position: relative
+
+                &:before, &:after 
+                    content: ''
+                    position: absolute
+                    transition: transform .5s ease
+                &:before, &::after
+                    left: 0
+                    top: 0
+                    width: 100%
+                    height: 100%
+                    border-style: solid
+                    border-color: #545454
+                &::before
+                    border-width: 2px 0 2px 0
+                    transform:  scaleX(0)
+                &:after 
+                    border-width: 0 2px 0 2px
+                    transform:  scaleY(0)
+                &:hover:before, &:hover:after 
+                    transform:  scale(1, 1)
+                &:hover
+                    font-weight: 700
+                    font-size: 15px
+    
+
+.headerMobile 
+    width: 100%
+    z-index: 3
+    display: none
+
+    ul 
+        margin: 0
+        padding: 0
+        list-style: none
+        overflow: hidden
+
+    li 
+        a
+            display:  block
+            padding: 20px 20px
+            text-decoration: none
+            color: #333
+            letter-spacing: 1px
+            font-size: 2vw
+            font-weight: 500
+            display: flex
+            justify-content: center
+
+    .logo 
+        padding-left: 60px
+        padding-right: 60px
+    
+    .part02Menu
+        display: flex
+        justify-content: center
+        border-top: 0.1px inset
+
+@media (max-width: 1199px)
+    
+    .headerDesktop
+        display: none
+
+    .headerMobile
+        display: block
+
+@media (max-width: 799px)
+
+    .headerMobile
+        li
+            a
+                font-size: 3vw
+                font-weight: 500
+
+@media (max-width: 600px)
+
+    .headerMobile
+        li
+            a
+                font-size: 3.2vw
+                font-weight: 700

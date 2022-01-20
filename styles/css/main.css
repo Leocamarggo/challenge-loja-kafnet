@@ -1,0 +1,212 @@
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #c7c7c7 !important;
+}
+
+.headerDesktop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+.headerDesktop ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  list-style: none;
+  overflow: hidden;
+  align-items: center;
+  padding: 0;
+}
+.headerDesktop .part01Menu {
+  padding-left: 50px;
+}
+.headerDesktop .part01Menu li {
+  padding: 10px;
+}
+.headerDesktop .part01Menu li a {
+  text-decoration: none;
+  color: #333;
+  letter-spacing: 2px;
+  font-size: 1vw;
+  padding: 0 0px 0 25px;
+  position: relative;
+}
+.headerDesktop .part01Menu li .lojaHeader {
+  font-size: 25px;
+  color: #e13d29;
+  font-weight: bold;
+}
+.headerDesktop .part01Menu li .kafnetHeader {
+  font-size: 25px;
+  margin-left: 40px;
+  color: #545454;
+  font-weight: bold;
+}
+.headerDesktop .part02Menu {
+  padding-right: 50px;
+}
+.headerDesktop .part02Menu li {
+  padding: 0 35px !important;
+}
+.headerDesktop .part02Menu li a {
+  text-decoration: none;
+  color: #333;
+  letter-spacing: 2px;
+  font-size: 1vw;
+  padding: 30px;
+  position: relative;
+}
+.headerDesktop .part02Menu li a:before, .headerDesktop .part02Menu li a:after {
+  content: "";
+  position: absolute;
+  transition: transform 0.5s ease;
+}
+.headerDesktop .part02Menu li a:before, .headerDesktop .part02Menu li a::after {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-color: #545454;
+}
+.headerDesktop .part02Menu li a::before {
+  border-width: 2px 0 2px 0;
+  transform: scaleX(0);
+}
+.headerDesktop .part02Menu li a:after {
+  border-width: 0 2px 0 2px;
+  transform: scaleY(0);
+}
+.headerDesktop .part02Menu li a:hover:before, .headerDesktop .part02Menu li a:hover:after {
+  transform: scale(1, 1);
+}
+.headerDesktop .part02Menu li a:hover {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.headerMobile {
+  width: 100%;
+  z-index: 3;
+  display: none;
+}
+.headerMobile ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.headerMobile li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #333;
+  letter-spacing: 1px;
+  font-size: 2vw;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+.headerMobile .logo {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.headerMobile .part02Menu {
+  display: flex;
+  justify-content: center;
+  border-top: 0.1px inset;
+}
+
+@media (max-width: 1199px) {
+  .headerDesktop {
+    display: none;
+  }
+
+  .headerMobile {
+    display: block;
+  }
+}
+@media (max-width: 799px) {
+  .headerMobile li a {
+    font-size: 3vw;
+    font-weight: 500;
+  }
+}
+@media (max-width: 600px) {
+  .headerMobile li a {
+    font-size: 3.2vw;
+    font-weight: 700;
+  }
+}
+.leftPage .row {
+  margin: 10px 10px;
+}
+.leftPage .row .cep {
+  width: 69% !important;
+}
+.leftPage .row .logra, .leftPage .row .numero {
+  width: 49% !important;
+}
+.leftPage .row .logra {
+  background: #808080;
+  color: #ffffff;
+}
+.leftPage .row .logra::placeholder {
+  color: #ffffff;
+}
+.leftPage .row .complemento {
+  width: 100% !important;
+}
+.leftPage .row .bairro {
+  width: 100% !important;
+  background: #808080;
+  color: #ffffff;
+}
+.leftPage .row .bairro::placeholder {
+  color: #ffffff;
+}
+.leftPage .row .cidade {
+  width: 68% !important;
+  background: #808080;
+  color: #ffffff;
+}
+.leftPage .row .cidade::placeholder {
+  color: #ffffff;
+}
+.leftPage .row .uf {
+  width: 30%;
+  background: #808080;
+  color: #ffffff;
+}
+.leftPage .row .uf::placeholder {
+  color: #ffffff;
+}
+.leftPage .row input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #dddddd;
+  width: 49%;
+  border: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.leftPage .row button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #e13d29;
+  width: 30%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
