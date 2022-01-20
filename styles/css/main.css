@@ -91,6 +91,7 @@ body {
   width: 100%;
   z-index: 3;
   display: none;
+  background-color: #fff;
 }
 .headerMobile ul {
   margin: 0;
@@ -127,10 +128,14 @@ body {
   .headerMobile {
     display: block;
   }
+  .headerMobile li a {
+    font-size: 1.8vw;
+    font-weight: 500;
+  }
 }
 @media (max-width: 799px) {
   .headerMobile li a {
-    font-size: 3vw;
+    font-size: 2.55vw;
     font-weight: 500;
   }
 }
@@ -140,50 +145,56 @@ body {
     font-weight: 700;
   }
 }
-.leftPage .row {
+.contLeftPage .col-6 {
+  margin: 20px 0 !important;
+}
+.contLeftPage .leftPage .row {
   margin: 10px 10px;
 }
-.leftPage .row .cep {
+.contLeftPage .leftPage .row .cep {
   width: 69% !important;
 }
-.leftPage .row .logra, .leftPage .row .numero {
+.contLeftPage .leftPage .row .logra, .contLeftPage .leftPage .row .numero {
   width: 49% !important;
+  margin-right: 0;
 }
-.leftPage .row .logra {
+.contLeftPage .leftPage .row .logra {
+  background: #808080;
+  color: #ffffff;
+  margin-right: 5px !important;
+}
+.contLeftPage .leftPage .row .logra::placeholder {
+  color: #ffffff;
+}
+.contLeftPage .leftPage .row .complemento {
+  width: 100% !important;
+}
+.contLeftPage .leftPage .row .bairro {
+  width: 100% !important;
   background: #808080;
   color: #ffffff;
 }
-.leftPage .row .logra::placeholder {
+.contLeftPage .leftPage .row .bairro::placeholder {
   color: #ffffff;
 }
-.leftPage .row .complemento {
-  width: 100% !important;
-}
-.leftPage .row .bairro {
-  width: 100% !important;
-  background: #808080;
-  color: #ffffff;
-}
-.leftPage .row .bairro::placeholder {
-  color: #ffffff;
-}
-.leftPage .row .cidade {
+.contLeftPage .leftPage .row .cidade {
   width: 68% !important;
   background: #808080;
   color: #ffffff;
 }
-.leftPage .row .cidade::placeholder {
+.contLeftPage .leftPage .row .cidade::placeholder {
   color: #ffffff;
 }
-.leftPage .row .uf {
+.contLeftPage .leftPage .row .uf {
   width: 30%;
   background: #808080;
   color: #ffffff;
+  margin-right: 0;
 }
-.leftPage .row .uf::placeholder {
+.contLeftPage .leftPage .row .uf::placeholder {
   color: #ffffff;
 }
-.leftPage .row input {
+.contLeftPage .leftPage .row input {
   font-family: "Roboto", sans-serif;
   outline: 0;
   background: #dddddd;
@@ -194,7 +205,7 @@ body {
   font-size: 14px;
   margin-right: 5px;
 }
-.leftPage .row button {
+.contLeftPage .leftPage .row button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -207,6 +218,55 @@ body {
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;
+}
+
+@media (max-width: 1199px) {
+  .contLeftPage {
+    flex-direction: column;
+  }
+  .contLeftPage .leftPage {
+    padding-bottom: 20px;
+  }
+  .contLeftPage .col-6 {
+    max-width: 100%;
+  }
+}
+@media (max-width: 799px) {
+  .contLeftPage .leftPage {
+    padding-bottom: 20px;
+  }
+  .contLeftPage .leftPage .row .cep {
+    width: 49% !important;
+  }
+  .contLeftPage .leftPage .row .logra, .contLeftPage .leftPage .row .numero {
+    width: 49% !important;
+  }
+  .contLeftPage .leftPage .row .cidade {
+    width: 59% !important;
+  }
+  .contLeftPage .leftPage .row .uf {
+    width: 38% !important;
+  }
+  .contLeftPage .leftPage .row button {
+    width: 49% !important;
+  }
+}
+.footer {
+  background-color: #ffffff;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.footer .row {
+  margin: 0;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+}
+.footer .row span {
+  color: #545454;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */
