@@ -145,8 +145,8 @@ body {
     font-weight: 700;
   }
 }
-.contLeftPage .col-6 {
-  margin: 20px 0 !important;
+.contLeftPage .leftPage {
+  margin-top: 15px;
 }
 .contLeftPage .leftPage .row {
   margin: 10px 10px;
@@ -254,7 +254,7 @@ body {
 .footer {
   background-color: #ffffff;
   color: white;
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -267,6 +267,71 @@ body {
 .footer .row span {
   color: #545454;
   font-size: 16px;
+}
+
+.rightPage {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-bottom: 20px;
+}
+.rightPage .contBtnContinuar {
+  display: flex;
+  justify-content: flex-end;
+}
+.rightPage .row {
+  margin: 10px 10px 0 10px;
+}
+.rightPage .row .col-6 {
+  margin-bottom: px;
+  max-width: 100%;
+  display: flex;
+  flex: 0 0 100%;
+  background-color: #dddddd;
+  padding: 10px;
+  border-radius: 10px;
+}
+.rightPage .row .col-6 .miniItem {
+  width: 70px;
+}
+.rightPage .row .col-6 .miniItem .item {
+  width: 100%;
+  border-radius: 10px;
+  max-width: 300px;
+}
+.rightPage .row .col-6 .descItem {
+  display: flex;
+  color: #545454;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.rightPage .row .col-6 .descItem .nameItem {
+  font-size: 19px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.rightPage .row button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #808080;
+  width: 30%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+@media (max-width: 799px) {
+  .rightPage .row button {
+    width: 50%;
+  }
+  .rightPage .row .col-6 .descItem .nameItem {
+    font-size: 15px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
