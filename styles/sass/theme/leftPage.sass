@@ -1,11 +1,21 @@
 .contLeftPage
     .leftPage
         margin-top: 15px
+        height: 73vh 
+        background-color: #ffffff
+        border-radius: 10px 0 0 10px
         .row
             margin: 10px 10px
 
             .cep
-                width: 69% !important
+                width: 68% !important
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+                    -webkit-appearance: none
+
+            .numero
+                &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+                    -webkit-appearance: none
+                    
             .logra, .numero
                 width: 49% !important
                 margin-right: 0
@@ -67,23 +77,35 @@
 
         .leftPage
             padding-bottom: 20px
+            border-radius: 10px
 
+            .row
+                .cep
+                    width: 60% !important
+                .logra, .numero
+                    width: 49.5% !important
+                .cidade
+                    width: 60% !important
+                .uf
+                    width: 39% !important
+                button
+                    width: 39% !important
         .col-6
             max-width: 100%
 
 @media (max-width: 799px)
     .contLeftPage
         .leftPage
-            padding-bottom: 20px
-
             .row
                 .cep
-                    width: 49% !important
+                    width: 59% !important
+                button
+                    width: 38% !important
                 .logra, .numero
                     width: 49% !important
                 .cidade
                     width: 59% !important
                 .uf
                     width: 38% !important
-                button
-                    width: 49% !important
+
+

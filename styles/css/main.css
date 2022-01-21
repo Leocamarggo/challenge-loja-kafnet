@@ -22,10 +22,7 @@ body {
 .headerDesktop .part01Menu {
   padding-left: 50px;
 }
-.headerDesktop .part01Menu li {
-  padding: 10px;
-}
-.headerDesktop .part01Menu li a {
+.headerDesktop .part01Menu a {
   text-decoration: none;
   color: #333;
   letter-spacing: 2px;
@@ -33,12 +30,15 @@ body {
   padding: 0 0px 0 25px;
   position: relative;
 }
-.headerDesktop .part01Menu li .lojaHeader {
+.headerDesktop .part01Menu a li {
+  padding: 10px;
+}
+.headerDesktop .part01Menu .lojaHeader {
   font-size: 25px;
   color: #e13d29;
   font-weight: bold;
 }
-.headerDesktop .part01Menu li .kafnetHeader {
+.headerDesktop .part01Menu .kafnetHeader {
   font-size: 25px;
   margin-left: 40px;
   color: #545454;
@@ -47,42 +47,41 @@ body {
 .headerDesktop .part02Menu {
   padding-right: 50px;
 }
-.headerDesktop .part02Menu li {
-  padding: 0 35px !important;
-}
-.headerDesktop .part02Menu li a {
+.headerDesktop .part02Menu a {
   text-decoration: none;
-  color: #333;
+  color: #545454;
   letter-spacing: 2px;
   font-size: 1vw;
   padding: 30px;
   position: relative;
+  margin-right: 10px;
 }
-.headerDesktop .part02Menu li a:before, .headerDesktop .part02Menu li a:after {
+.headerDesktop .part02Menu a:before, .headerDesktop .part02Menu a:after {
   content: "";
   position: absolute;
   transition: transform 0.5s ease;
 }
-.headerDesktop .part02Menu li a:before, .headerDesktop .part02Menu li a::after {
+.headerDesktop .part02Menu a:before, .headerDesktop .part02Menu a::after {
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   border-style: solid;
   border-color: #545454;
+  border-radius: 10px;
 }
-.headerDesktop .part02Menu li a::before {
+.headerDesktop .part02Menu a::before {
   border-width: 2px 0 2px 0;
   transform: scaleX(0);
 }
-.headerDesktop .part02Menu li a:after {
+.headerDesktop .part02Menu a:after {
   border-width: 0 2px 0 2px;
   transform: scaleY(0);
 }
-.headerDesktop .part02Menu li a:hover:before, .headerDesktop .part02Menu li a:hover:after {
+.headerDesktop .part02Menu a:hover:before, .headerDesktop .part02Menu a:hover:after {
   transform: scale(1, 1);
 }
-.headerDesktop .part02Menu li a:hover {
+.headerDesktop .part02Menu a:hover {
   font-weight: 700;
   font-size: 15px;
 }
@@ -147,12 +146,21 @@ body {
 }
 .contLeftPage .leftPage {
   margin-top: 15px;
+  height: 73vh;
+  background-color: #ffffff;
+  border-radius: 10px 0 0 10px;
 }
 .contLeftPage .leftPage .row {
   margin: 10px 10px;
 }
 .contLeftPage .leftPage .row .cep {
-  width: 69% !important;
+  width: 68% !important;
+}
+.contLeftPage .leftPage .row .cep::-webkit-outer-spin-button, .contLeftPage .leftPage .row .cep::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.contLeftPage .leftPage .row .numero::-webkit-outer-spin-button, .contLeftPage .leftPage .row .numero::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 .contLeftPage .leftPage .row .logra, .contLeftPage .leftPage .row .numero {
   width: 49% !important;
@@ -226,17 +234,33 @@ body {
   }
   .contLeftPage .leftPage {
     padding-bottom: 20px;
+    border-radius: 10px;
+  }
+  .contLeftPage .leftPage .row .cep {
+    width: 60% !important;
+  }
+  .contLeftPage .leftPage .row .logra, .contLeftPage .leftPage .row .numero {
+    width: 49.5% !important;
+  }
+  .contLeftPage .leftPage .row .cidade {
+    width: 60% !important;
+  }
+  .contLeftPage .leftPage .row .uf {
+    width: 39% !important;
+  }
+  .contLeftPage .leftPage .row button {
+    width: 39% !important;
   }
   .contLeftPage .col-6 {
     max-width: 100%;
   }
 }
 @media (max-width: 799px) {
-  .contLeftPage .leftPage {
-    padding-bottom: 20px;
-  }
   .contLeftPage .leftPage .row .cep {
-    width: 49% !important;
+    width: 59% !important;
+  }
+  .contLeftPage .leftPage .row button {
+    width: 38% !important;
   }
   .contLeftPage .leftPage .row .logra, .contLeftPage .leftPage .row .numero {
     width: 49% !important;
@@ -246,9 +270,6 @@ body {
   }
   .contLeftPage .leftPage .row .uf {
     width: 38% !important;
-  }
-  .contLeftPage .leftPage .row button {
-    width: 49% !important;
   }
 }
 .footer {
@@ -271,6 +292,9 @@ body {
   margin-top: 15px;
   margin-bottom: 15px;
   padding-bottom: 20px;
+  height: 73vh;
+  background-color: #e13d29;
+  border-radius: 0 10px 10px 0;
 }
 .rightPage .contBtnContinuar {
   display: flex;
@@ -329,6 +353,11 @@ body {
   }
   .rightPage .row .col-6 .descItem .nameItem {
     font-size: 15px;
+  }
+}
+@media (max-width: 1199px) {
+  .rightPage {
+    border-radius: 10px;
   }
 }
 

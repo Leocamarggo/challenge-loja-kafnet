@@ -23,23 +23,33 @@
                     <img src="./images/logo.jpg" alt="Logo Kafnet" height="80px"/>
                 </a>
             </li>
-            <li>
-                <a href="#" class="lojaHeader">Loja</a><br/>
-                <a href="#" class="kafnetHeader">Kafnet</a> 
-            </li>
+            <a href="#">
+                <li>
+                    <span class="lojaHeader" >Loja</span><br/>
+                    <span class="kafnetHeader">Kafnet</span> 
+                </li>
+            </a>
             
         </ul>
-        <ul class="part02Menu">
-            <li>
-                <a href="#">HOME</a>
-            </li>
-            <li>
-                <a href="#">PRODUTOS</a>
-            </li>
-            <li>
-                <a href="#">COMPRAS</a>
-            </li>
-        </ul>
+        <nav role="navigation">
+            <ul class="part02Menu h-100">
+                <a href="">
+                    <li>
+                        HOME
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        PRODUTOS
+                    </li>
+                </a>
+                <a href="">
+                    <li>
+                        COMPRAS
+                    </li>
+                </a>
+            </ul>
+        </nav>
     </div>
 
     <div class="headerMobile">
@@ -65,34 +75,34 @@
 
     <!-- Conteudo -->
     <div class="contLeftPage container d-flex" >
-        <div class="col-6 leftPage" style="height: 73vh; background-color: #ffffff;">
+        <div class="col-6 leftPage">
             <div class="titleLeft row d-flex justify-content-center mt-5">
-                <h4>Endereço para entrega</h4>
+                <h4>Cadastre o endereço de entrega</h4>
             </div>
 
             <div class="leftInputs  d-flex flex-column mt-5">
                 <div class="row">
-                    <input class="cep" name="cep" type="text" placeholder="CEP"/>
+                    <input class="cep" autofocus name="cep" type="number" placeholder="*CEP" aria-required="true" required aria-label="Digite seu CEP aqui e clique em pesquisar ao lado... Após isso, digite o numero mais abaixo..."/>
                     <button id="btnSubmit">PESQUISAR</button>
                 </div>
                 <div class="row">
-                    <input class="logra" id="logra" type="text" placeholder="Logradouro" disabled/>
-                    <input class="numero" type="text" placeholder="Número"/>
+                    <input class="logra" id="logra" type="text" placeholder="Logradouro" aria-label="Digite acima e clique em pesquisar..." disabled/>
+                    <input class="numero" name="numero" type="number" placeholder="*Número" aria-required="true" required  aria-label="Digite o numero da residencia aqui..."/>
                 </div>
                 <div class="row">
-                    <input class="complemento" type="text" placeholder="Complemento"/>
+                    <input class="complemento" type="text" placeholder="Complemento" aria-label="Digite o complemento aqui..."/>
                 </div>
                 <div class="row">
                     <input class="bairro" id="bairro" type="text" placeholder="Bairro" disabled/>
                 </div>
                 <div class="row">
                     <input class="cidade" id="cidade" type="text" placeholder="Cidade" disabled/>
-                    <input class="uf" id="uf" type="text" placeholder="UF" disabled/>
+                    <input class="uf" name="uf" id="uf" type="text" placeholder="UF" disabled/>
                 </div>
             </div>
 
         </div>
-        <div class="col-6 rightPage " style="height: 73vh; background-color: #e13d29;">
+        <div class="col-6 rightPage">
             <div class="titleRight row d-flex justify-content-center mt-5">
                 <h4 style="color: white;">Minhas compras</h4>
             </div>
@@ -159,7 +169,7 @@
             const cep = $('input[name="cep"]').val();
 
             if(cep === ''){
-                alert("Preencha o campo CEP para pesquisar!")
+                alert("Preencha o campo CEP e clique em pesquisar!")
             }else{
                 $.ajax({
                     url: `https://viacep.com.br/ws/${cep}/json/`,
@@ -168,7 +178,6 @@
                     contentType: "application/json",
                     crossDomain: true,
                     success: function(response) {
-                        console.log(response)
                         document.getElementById('logra').value = response.logradouro;
                         document.getElementById('bairro').value = response.bairro;
                         document.getElementById('cidade').value = response.localidade;
@@ -179,6 +188,19 @@
                     }
                 });
             }
+        });
+        $('#btnContinuar').click(function(e){
+            e.preventDefault();
+            const cep = $('input[name="cep"]').val();
+            const numero = $('input[name="numero"]').val();
+            const uf = $('input[name="uf"]').val();
+
+            if(cep === '' || uf === ''){   
+                alert("Preencha o campo CEP e clique em pesquisar!")
+            }else if(numero === ''){
+                alert("Preencha o campo Número!")
+            }
+
         });
     </script>
 </body>
